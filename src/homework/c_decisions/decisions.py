@@ -13,3 +13,13 @@ def get_faculty_rating (ratio):
         return 'Needs Improvement'
     if (ratio < .6 and ratio >= 0):
         return 'Unacceptable'
+    
+def sum_odd_numbers (num):
+    sum = 0
+    i = 0
+    while i <= num: #"up to the num value" does this include 
+        if (i%2 == 1): # makes the number odd
+            sum = i + sum
+        i = i + 1
+    return sum
+#sum_odd_numbers(5)
