@@ -1,6 +1,8 @@
 import unittest
-from src.homework.i_dictionaries_and_sets import get_p_distance
-from src.homework.i_dictionaries_and_sets import get_p_distance
+from homework.i_dictionaries_sets.dictionary import add_inventory
+# from h/w this does nothing for my code:
+# from src.homework.i_dictionaries_and_sets import get_p_distance
+# from src.homework.i_dictionaries_and_sets import get_p_distance
 
 class Test_Config(unittest.TestCase):
     def setUp(self):
@@ -19,10 +21,10 @@ class Test_Config(unittest.TestCase):
         # Test updating existing Widget1 item quantity to 25 with negative quantity
         add_inventory(self.inventory_dictionary, "Widget1", -10)
         self.assertEqual(self.inventory_dictionary["Widget1"], 25)
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()
     
-     def setUp(self):
+    def setUp(self):
         # Initialize a sample inventory dictionary
         self.inventory_dictionary = {}
 
@@ -32,16 +34,15 @@ class Test_Config(unittest.TestCase):
 
     def test_remove_inventory_widget(self):
         # Remove widget1
-        removed_quantity = remove_inventory_widget(self.inventory_dictionary, "Widget1", 10)
+        result = remove_inventory_widget(self.inventory_dictionary, "Widget1")
 
         # Test that widget1 is removed
-        self.assertEqual(removed_quantity, 10)
+        self.assertEqual(result, "Record deleted")
         
         # Test that the length of the dictionary is 1
         self.assertEqual(len(self.inventory_dictionary), 1)
 
         # Test that widget2 still exists
         self.assertTrue("Widget2" in self.inventory_dictionary)
-
 if __name__ == '__main__':
     unittest.main()
