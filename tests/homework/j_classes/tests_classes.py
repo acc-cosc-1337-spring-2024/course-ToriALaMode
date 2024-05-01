@@ -1,5 +1,5 @@
 import unittest
-from j_classes import Die
+from class_a import Die
 class TestDie(unittest.TestCase):
     def test_rolled_value_range(self):
         die = Die()
