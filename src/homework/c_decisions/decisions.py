@@ -23,3 +23,12 @@ def sum_odd_numbers (num):
         i = i + 1
     return sum
 #sum_odd_numbers(5)
+
+def sum_odd_numbers(num):
+    sum_odd = 0
+    i = 1
+    while i <= num:
+        if i % 2 != 0:
+            sum_odd += i
+        i += 1
+    return sum_odd
