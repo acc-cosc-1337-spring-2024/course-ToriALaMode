@@ -1,5 +1,6 @@
 import unittest
-from src.homework.j_classes.class_a import Die #there should be no reason I get this error but I do "ModuleNotFoundError: No module named 'class_a'"
+from src.homework.j_classes.class_a import Die #there should be no reason I get this error but I do "ModuleNotFoundError: No module named 'class_a' 
+#code works outside of github"
 class TestDie(unittest.TestCase):
     def test_rolled_value_range(self):
         die = Die()
